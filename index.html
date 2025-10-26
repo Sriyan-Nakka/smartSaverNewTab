@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Sai Sriyan Nakka" />
+    <meta name="description" content="SmartSaver New Tab" />
+    <title>SmartSaver</title>
+    <style>
+      @font-face {
+        font-family: "Varela Round";
+        src: url("VarelaRound-Regular.ttf") format("truetype");
+      }
+      html {
+        background-color: #000;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        font-size: 62.5%;
+        background-color: #000;
+        color: white;
+        text-align: center;
+        overflow: hidden;
+      }
+      #timeContainer {
+        position: absolute;
+        visibility: hidden;
+        width: max-content;
+        cursor: default;
+      }
+      #mainTime {
+        font-family: "Varela Round", sans-serif;
+        font-size: 8rem;
+        font-weight: 500;
+        letter-spacing: -0.05em;
+      }
+      #mainTime .seconds {
+        font-size: 0.4em;
+        vertical-align: super;
+        font-weight: 300;
+      }
+      #mainTime #ampm {
+        font-size: 0.3em;
+      }
+      #monthAndDate {
+        font-family: "Varela Round", sans-serif;
+        font-size: 2rem;
+        font-weight: 300;
+        margin-top: -0.5em;
+      }
+      #timeContainer.fading-out {
+        animation: fadeOutShrink 1s ease-in-out forwards;
+      }
+      #timeContainer.fading-in {
+        animation: fadeInGrow 1s ease-in-out forwards;
+      }
+      @keyframes fadeOutShrink {
+        from {
+          opacity: 1;
+          transform: scale(1);
+        }
+        to {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+      }
+      @keyframes fadeInGrow {
+        from {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <script src="script.js" defer></script>
+    <main>
+      <div id="timeContainer">
+        <div id="mainTime">
+          0:00<span class="seconds">: 00</span> <span id="ampm">AM</span>
+        </div>
+        <div id="monthAndDate">Sun, Oct 2025</div>
+      </div>
+    </main>
+  </body>
+</html>

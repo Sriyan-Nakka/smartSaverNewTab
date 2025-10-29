@@ -23,8 +23,8 @@ function handleMinuteChange() {
     timeContainer.classList.add("fading-in");
     setTimeout(() => {
       timeContainer.classList.remove("fading-in");
-    }, 1000);
-  }, 1000);
+    }, 2000);
+  }, 2000);
 }
 
 function updateTime() {

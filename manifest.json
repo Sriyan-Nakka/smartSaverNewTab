@@ -3,6 +3,9 @@
   "name": "SmartSaver New Tab",
   "description": "A smart, animated clock for your new tab page.",
   "version": "1.0",
+  "icons": {
+    "48": "clock-two-svgrepo-com.png"
+  },
   "chrome_url_overrides": {
     "newtab": "index.html"
   }

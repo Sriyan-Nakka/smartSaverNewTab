@@ -77,6 +77,17 @@
           transform: scale(1);
         }
       }
+      @keyframes initialFadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      #timeContainer.initial-fade-in {
+        animation: initialFadeIn 1s ease-in-out forwards;
+      }
     </style>
   </head>
   <body>

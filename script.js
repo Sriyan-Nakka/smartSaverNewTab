@@ -65,6 +65,10 @@ function tick() {
 window.addEventListener("load", () => {
   setRandomPosition();
   timeContainer.style.visibility = "visible";
+  timeContainer.classList.add("initial-fade-in");
+  setTimeout(() => {
+    timeContainer.classList.remove("initial-fade-in");
+  }, 1000);
 });
 
 tick();

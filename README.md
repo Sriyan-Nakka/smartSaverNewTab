@@ -1,5 +1,7 @@
 # SmartSaver New Tab
 
+![SmartSaverNewTab_READMEimg](https://github.com/user-attachments/assets/a991d5e0-2148-4c0d-aeb2-b4a6a81db8b3)
+
 This is a Chrome New Tab Extension which has been 99% Vibe Coded(the other 1% is just the files and other assets)
 
 This is a Chrome New Tab Extension which was inspired by a minimal screensaver design. Hope you like it!

@@ -15,27 +15,24 @@ function setRandomPosition() {
   timeContainer.style.top = `${randomY}px`;
 }
 
-function handleMinuteChange() {
-  timeContainer.classList.add("fading-out");
-  setTimeout(() => {
-    timeContainer.classList.remove("fading-out");
-    setRandomPosition();
-    timeContainer.classList.add("fading-in");
-    setTimeout(() => {
-      timeContainer.classList.remove("fading-in");
-    }, 2000);
-  }, 2000);
-}
-
 function updateTime() {
   const now = new Date();
   let hours = now.getHours();
   const minutes = now.getMinutes();
   const seconds = now.getSeconds();
 
+  if (seconds === 58) {
+    timeContainer.classList.add("fading-out");
+  }
+
   if (minutes !== currentMinute) {
     currentMinute = minutes;
-    handleMinuteChange();
+    timeContainer.classList.remove("fading-out");
+    setRandomPosition();
+    timeContainer.classList.add("fading-in");
+    setTimeout(() => {
+      timeContainer.classList.remove("fading-in");
+    }, 2000);
   }
 
   const ampm = hours >= 12 ? "P M" : "A M";

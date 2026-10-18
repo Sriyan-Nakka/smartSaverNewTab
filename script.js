@@ -42,8 +42,9 @@ function updateTime() {
   const formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
   const formattedSeconds = seconds < 10 ? "0" + seconds : seconds;
 
-  mainTime.childNodes[0].nodeValue = `${hours}:${formattedMinutes}`;
-  secondsSpan.textContent = `: ${formattedSeconds}`;
+  document.getElementById("hours").textContent = hours;
+  document.getElementById("minutes").textContent = formattedMinutes;
+  secondsSpan.textContent = `:${formattedSeconds}`;
   ampmSpan.textContent = ampm;
 
   const dateOptions = { month: "short", year: "numeric" };

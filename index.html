@@ -52,12 +52,20 @@
       }
       #mainTime #ampm {
         font-size: 0.3em;
+        margin-left: 0.05em;
       }
       #monthAndDate {
         font-family: "Varela Round", sans-serif;
         font-size: 2rem;
         font-weight: 300;
         margin-top: -0.5em;
+      }
+      #monthAndDate #year {
+        display: block;
+        letter-spacing: 4px;
+        margin-top: 0.25em;
+        font-size: 1.5rem;
+        font-weight: 300;
       }
       #timeContainer.fading-out {
         animation: fadeOutShrink 2s ease-in-out forwards;
@@ -109,10 +117,12 @@
         <div id="mainTime">
           <span id="hours">0</span
           ><span class="gray" style="font-size: 100px">:</span
-          ><span id="minutes">00</span><sup class="seconds gray">:00</sup>
-          <span id="ampm" class="gray">AM</span>
+          ><span id="minutes">00</span><sup class="seconds gray">:00</sup><span id="ampm" class="gray">AM</span>
         </div>
-        <div id="monthAndDate">Sun, Oct 18</div>
+        <div id="monthAndDate">
+          <span id="dayAndDate">Sun, 18 Oct</span>
+          <span id="year">2026</span>
+        </div>
       </div>
     </main>
   </body>

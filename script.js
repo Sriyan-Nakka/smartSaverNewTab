@@ -47,10 +47,14 @@ function updateTime() {
   secondsSpan.textContent = `:${formattedSeconds}`;
   ampmSpan.textContent = ampm;
 
-  const dateOptions = { month: "short", year: "numeric" };
-  const dateStr = now.toLocaleDateString("en-US", dateOptions);
+  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const day = now.getDate();
+  const month = months[now.getMonth()];
+  const year = now.getFullYear();
   const dayStr = now.toLocaleDateString("en-US", { weekday: "short" });
-  monthAndDate.textContent = `${dayStr}, ${dateStr}`;
+
+  document.getElementById("dayAndDate").textContent = `${dayStr}, ${day} ${month}`;
+  document.getElementById("year").textContent = year;
 }
 
 function tick() {

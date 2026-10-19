@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "SmartSaver New Tab",
   "description": "A smart, animated clock for your new tab page.",
-  "version": "1.1",
+  "version": "1.1.1",
   "icons": {
     "48": "clock-two-svgrepo-com.png"
   },
